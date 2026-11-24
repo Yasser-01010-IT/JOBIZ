@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Arrow Head (Indigo) -->
+  <path d="M50 8 L85 45 C86 46.2 84.8 48 83 48 L17 48 C15.2 48 14 46.2 15 45 L50 8 Z" fill="url(#indigoGrad)" />
+  <!-- J Stem Curved Hook -->
+  <path d="M50 48 V80 C50 92 41 98 29 98 C17 98 8 91 8 82 C8 78 11 75 15 75 C19 75 22 78 23.5 81 C24.5 83 26.5 84.5 29 84.5 C34 84.5 37 80 37 73 V48 H50 Z" fill="#1E293B" />
+  <defs>
+    <linearGradient id="indigoGrad" x1="50" y1="8" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+  </defs>
+</svg>

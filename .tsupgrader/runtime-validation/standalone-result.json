@@ -1,0 +1,109 @@
+{
+  "planHash": "d046cdc6fb752471eb17a1af507648270df18bb545e9fb157c8a29559480cfb6",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-24T02:36:25.4021881Z",
+  "retryCount": 3,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 0,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "build-succeeds",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 1,
+        "outputSample": "\r\n\u003E job-easy-landing@1.0.0 build\r\n\u003E vite build\r\n\r\n\u001B[31mfailed to load config from C:\\Users\\YASSIR\\Desktop\\PROJECTS\\APPSNEE\\vite.config.js\u001B[39m\r\n\u001B[31merror during build:\r\nError [ERR_MODULE_NOT_FOUND]: Cannot find package \u0027@vitejs/plugin-react\u0027 imported from C:\\Users\\YASSIR\\Desktop\\PROJECTS\\APPSNEE\\node_modules\\.vite-temp\\vite.config.js.timestamp-1795487783294-a2f486e8a0238.mjs\r\n    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:266:9)\r\n    at packageResolve (node:internal/modules/esm/resolve:767:81)\r\n    at moduleResolve (node:internal/modules/esm/resolve:853:18)\r\n    at defaultResolve (node:internal/modules/esm/resolve:983:11)\r\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:731:20)\r\n    at ModuleLoader.resolve (node:internal/modules/esm/loader:708:38)\r\n    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:310:38)\r\n    at ModuleJob._link (node:internal/modules/esm/module_job:183:49)\u001B[39m\r\n",
+        "durationMs": 4489
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": false,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 1,
+        "outputSample": "\r\n\u003E job-easy-landing@1.0.0 test\r\n\u003E vitest run\r\n\r\n\u0027vitest\u0027 n\u0027est pas reconnu en tant que commande interne\r\nou externe, un programme ex\uFFFDcutable ou un fichier de commandes.\r\n",
+        "durationMs": 1595,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      },
+      {
+        "name": "dev-server-serves-home",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022fr\u0022 class=\u0022scroll-smooth\u0022\u003E\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\n    \u003Clink rel=\u0022icon\u0022 type=\u0022image/svg\u002Bxml\u0022 href=\u0022/logo-icon.svg\u0022 /\u003E\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\n    \u003Ctitle\u003EJobinz \u00B7 L\u0027assistant IA qui d\u00E9croche ton stage\u003C/title\u003E\n    \u003Cmeta name=\u0022description\u0022 content=\u0022Jobinz orchestre 6 agents IA pour accompagner les \u00E9tudiants de la recherche d\u0027offres jusqu\u0027\u00E0 l\u0027envoi de la candidature valid\u00E9e. Con\u00E7u pour le SNEE P\u00E9pite.\u0022 /\u003E\n    \n    \u003C!-- Inter provides a clean, professional sans-serif close to Claude\u0027s interface typography. --\u003E\n    \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://fonts.googleapis.com\u0022\u003E\n    \u003Clink rel=\u0022preconnect\u0022 href=\u0022https://fonts.gstatic.com\u0022 crossorigin\u003E\n    \u003Clink href=\u0022https://fonts.googleapis.com/css2?family=Dancing\u002BScript:wght@500;600;700\u0026family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600\u0026family=JetBrains\u002BMono:wght@400;500;600\u0026display=swap\u0022 rel=\u0022stylesheet\u0022\u003E\n  \u003C/head\u003E\n  \u003Cbody class=\u0022bg-slate-50 text-slate-900 antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden\u0022\u003E\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.jsx?t=1795487419974\u0022\u003E\u003C/script\u003E\n  \u003C/body\u003E\n\u003C/html\u003E\n",
+        "durationMs": 41
+      }
+    ],
+    "executions": [
+      {
+        "source": "devServer",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "dev"
+        ],
+        "cwd": "C:\\Users\\YASSIR\\Desktop\\PROJECTS\\APPSNEE",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "build-succeeds",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "C:\\Users\\YASSIR\\Desktop\\PROJECTS\\APPSNEE",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\YASSIR\\Desktop\\PROJECTS\\APPSNEE",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "dev-server-serves-home",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "dev"
+        ],
+        "cwd": "C:\\Users\\YASSIR\\Desktop\\PROJECTS\\APPSNEE",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}

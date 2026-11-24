@@ -1,0 +1,60 @@
+.site-footer {
+  isolation: isolate;
+  background-color: #08080a;
+  color: #f8fafc;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.site-footer::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+  pointer-events: none;
+}
+
+.site-footer__threads {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.34;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+}
+
+.site-footer__threads .threads-container {
+  position: absolute;
+  inset: 0;
+}
+
+.site-footer__content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff !important;
+}
+
+.site-footer__content * {
+  color: #ffffff !important;
+}
+
+.site-footer__content h4 {
+  font-family: inherit;
+}
+
+.site-footer__content a,
+.site-footer__content button {
+  transition-duration: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer__content a,
+  .site-footer__content button {
+    transition: none;
+  }
+}
