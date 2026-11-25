@@ -10,5 +10,8 @@ describe('Jobinz landing page', () => {
 
     expect(markup).toContain('Jobinz');
     expect(markup).toContain('questionnaire');
+    expect(markup).toContain('Ce que Jobinz t’apporte');
+    expect(markup).toContain('Les services proposés par Jobinz');
+    expect(markup).not.toContain('Recherche classique');
   });
 });

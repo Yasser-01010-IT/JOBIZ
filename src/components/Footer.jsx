@@ -66,7 +66,7 @@ export default function Footer({ onOpenAdmin }) {
               <li><a href="#agents" className="hover:text-white transition-colors">Les 6 Agents IA</a></li>
               <li><a href="#journey" className="hover:text-white transition-colors">Parcours Étudiant</a></li>
               <li><a href="#cas-sara" className="hover:text-white transition-colors">Cas Sara (M1)</a></li>
-              <li><a href="#comparatif" className="hover:text-white transition-colors">Comparatif LinkedIn</a></li>
+              <li><a href="#accompagnement" className="hover:text-white transition-colors">Accompagnement Jobinz</a></li>
               <li><a href="#modele-economique" className="hover:text-white transition-colors">Modèle Économique</a></li>
             </ul>
           </div>

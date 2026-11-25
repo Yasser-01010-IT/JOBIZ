@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Download, Trash2, Users, RefreshCw } from 'lucide-react';
 
 const LEGACY_SURVEY_STORAGE_KEY = 'Jobinz_survey_submissions';
+const surveySpreadsheetUrl = import.meta.env.VITE_SURVEY_SPREADSHEET_URL;
 
 export default function AdminSurveyModal({ isOpen, onClose }) {
   const [submissions, setSubmissions] = useState([]);
@@ -84,7 +85,7 @@ export default function AdminSurveyModal({ isOpen, onClose }) {
                 Collecte des réponses de l’étude
               </h3>
               <p className="text-xs text-slate-400">
-                Cette liste affiche les anciennes réponses locales. Les nouvelles sont enregistrées dans data/jobinz-survey-responses.xlsx par le serveur de développement Vite.
+                En production, les nouvelles réponses sont enregistrées dans Google Sheets. Cette liste contient uniquement l’ancienne archive locale de ce navigateur.
               </p>
             </div>
           </div>
@@ -103,6 +104,16 @@ export default function AdminSurveyModal({ isOpen, onClose }) {
           </div>
 
           <div className="flex items-center gap-2">
+            {surveySpreadsheetUrl && (
+              <a
+                href={surveySpreadsheetUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-white font-bold transition-colors"
+              >
+                Ouvrir les réponses Google Sheets
+              </a>
+            )}
             <button
               onClick={loadData}
               className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 flex items-center gap-1.5 transition-colors"
@@ -138,7 +149,7 @@ export default function AdminSurveyModal({ isOpen, onClose }) {
                 Aucune ancienne réponse locale sur cet appareil.
               </p>
               <p className="text-xs text-slate-500">
-                Les nouvelles réponses apparaîtront dans data/jobinz-survey-responses.xlsx après un envoi depuis le serveur de développement Vite.
+                En production, les nouvelles réponses sont consultables dans la feuille Google Sheets configurée pour ce projet.
               </p>
             </div>
           ) : (

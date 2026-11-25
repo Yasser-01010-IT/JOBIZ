@@ -1,8 +1,17 @@
 import React from 'react';
-import { Check, Minus, Sparkles } from 'lucide-react';
+import { BarChart3, FileCheck, MailCheck, Search, ShieldCheck, Sparkles, UserCheck } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { COMPARISON_DATA } from '../data/mockData';
+import { JOBINZ_FEATURES } from '../data/mockData';
 import './Comparison.css';
+
+const featureIcons = {
+  search: Search,
+  profile: UserCheck,
+  documents: FileCheck,
+  send: MailCheck,
+  tracking: BarChart3,
+  agents: ShieldCheck
+};
 
 export default function Comparison() {
   const reduceMotion = useReducedMotion();
@@ -17,76 +26,60 @@ export default function Comparison() {
       };
 
   return (
-    <section id="comparatif" className="comparison-section">
+    <section id="accompagnement" className="comparison-section">
       <div className="comparison-shell">
         <motion.header className="comparison-header" {...reveal(0)}>
           <span className="comparison-eyebrow">
             <Sparkles aria-hidden="true" />
-            Différenciation stratégique
+            Ce que Jobinz t’apporte
           </span>
           <h2>
-            Plus qu’une liste d’offres.
-            <span> Un accompagnement complet.</span>
+            Ta recherche de stage,
+            <span> accompagnée de A à Z.</span>
           </h2>
           <p>
-            Les espaces de recherche classiques servent surtout à publier des annonces.
-            Jobinz accompagne toute la démarche, de la sélection jusqu’au suivi.
+            Des offres pertinentes, des candidatures personnalisées et un suivi clair — avec toi aux commandes à chaque étape.
           </p>
         </motion.header>
 
         <motion.div className="comparison-table-wrap" {...reveal(0.08)}>
-          <div className="comparison-table-scroll">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th scope="col">Fonctionnalités clés</th>
-                  <th scope="col" className="comparison-classic-column">
-                    Recherche classique
-                  </th>
-                  <th scope="col" className="comparison-jobinz-column">
-                    Jobinz
-                    <span>6 agents IA</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON_DATA.map((row, index) => (
+          <table className="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Les services Jobinz</th>
+                <th scope="col">Ce que ça t’apporte</th>
+              </tr>
+            </thead>
+            <tbody>
+              {JOBINZ_FEATURES.map((feature, index) => {
+                const Icon = featureIcons[feature.icon];
+
+                return (
                   <motion.tr
-                    key={row.feature}
+                    key={feature.feature}
                     {...(reduceMotion
                       ? {}
                       : {
                           initial: { opacity: 0, y: 8 },
                           whileInView: { opacity: 1, y: 0 },
                           viewport: { once: true, amount: 0.3 },
-                          transition: { duration: 0.42, delay: 0.12 + index * 0.045 }
+                          transition: { duration: 0.42, delay: 0.1 + index * 0.045 }
                         })}
                   >
                     <td>
-                      <strong>{row.feature}</strong>
-                      <span>{row.note}</span>
-                    </td>
-                    <td className="comparison-status-cell comparison-classic-column">
-                      {row.linkedin ? (
-                        <span className="comparison-status comparison-status--partial" aria-label="Partiellement disponible">
-                          <Minus aria-hidden="true" />
+                      <span className="comparison-feature-name">
+                        <span className="comparison-feature-icon">
+                          <Icon aria-hidden="true" />
                         </span>
-                      ) : (
-                        <span className="comparison-status comparison-status--missing" aria-label="Non disponible">
-                          <Minus aria-hidden="true" />
-                        </span>
-                      )}
-                    </td>
-                    <td className="comparison-status-cell comparison-jobinz-column">
-                      <span className="comparison-status comparison-status--available" aria-label="Disponible">
-                        <Check aria-hidden="true" />
+                        <strong>{feature.feature}</strong>
                       </span>
                     </td>
+                    <td>{feature.note}</td>
                   </motion.tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                );
+              })}
+            </tbody>
+          </table>
         </motion.div>
       </div>
     </section>

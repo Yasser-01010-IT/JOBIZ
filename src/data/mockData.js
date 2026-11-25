@@ -211,48 +211,36 @@ export const STUDENT_JOURNEY_STEPS = [
   }
 ];
 
-export const COMPARISON_DATA = [
+export const JOBINZ_FEATURES = [
   {
-    feature: 'Diffusion d\'offres brutes',
-    jobinz: true,
-    linkedin: true,
-    indeed: true,
-    note: 'Jobinz agrège tous les jobboards en temps réel'
+    feature: 'Offres rassemblées au même endroit',
+    icon: 'search',
+    note: 'Retrouve les opportunités de plusieurs jobboards au même endroit'
   },
   {
     feature: 'Matching selon le profil réel & compétences',
-    jobinz: true,
-    linkedin: false,
-    indeed: false,
+    icon: 'profile',
     note: 'Analyse sémantique fine des projets et cours suivis'
   },
   {
     feature: 'CV & Lettre adaptés automatiquement',
-    jobinz: true,
-    linkedin: false,
-    indeed: false,
+    icon: 'documents',
     note: 'Générés à la volée pour chaque fiche de poste'
   },
   {
     feature: 'Envoi automatisé via e-mail avec validation étudiant',
-    jobinz: true,
-    linkedin: false,
-    indeed: false,
+    icon: 'send',
     note: 'Hermes transmet directement au recruteur avec ton accord'
   },
   {
-    feature: 'Suivi centralisé et relances intelligentes',
-    jobinz: true,
-    linkedin: false,
-    indeed: false,
-    note: 'Fin des tableurs Excel égarés'
+    feature: 'Suivi des candidatures et relances',
+    icon: 'tracking',
+    note: 'Visualise tes démarches et les prochaines étapes depuis un seul espace'
   },
   {
-    feature: 'Coordination de 6 Agents IA spécialisés',
-    jobinz: true,
-    linkedin: false,
-    indeed: false,
-    note: 'Architecture unique d\'agents autonomes interconnectés'
+    feature: 'Coordination de 6 agents IA spécialisés',
+    icon: 'agents',
+    note: 'Des agents spécialisés se coordonnent à chaque étape de ta recherche'
   }
 ];
 

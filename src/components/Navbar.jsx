@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import StaggeredMenu from './StaggeredMenu';
 
 export default function Navbar({ onOpenSurvey }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 24);
+
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
+
   const menuItems = [
     { label: 'Le Constat', ariaLabel: '4 Obstacles étudiants', link: '#obstacles' },
     { label: '6 Agents IA', ariaLabel: 'Les agents spécialisés', link: '#agents' },
     { label: 'Parcours', ariaLabel: 'Workflow en 6 étapes', link: '#journey' },
     { label: 'Cas Concret', ariaLabel: 'Cas Sara M1 Informatique', link: '#cas-sara' },
-    { label: 'Comparatif', ariaLabel: 'Jobinz vs LinkedIn et Indeed', link: '#comparatif' },
+    { label: 'Accompagnement', ariaLabel: 'Les services proposés par Jobinz', link: '#accompagnement' },
     { label: 'Modèle Éco', ariaLabel: 'Freemium, Premium et B2B', link: '#modele-economique' },
     { label: 'Étude & Bêta', ariaLabel: 'Questionnaire et premiers testeurs', link: '#questionnaire' }
   ];
@@ -25,6 +35,7 @@ export default function Navbar({ onOpenSurvey }) {
         logoUrl="/logo-icon.svg"
         accentColor="#6366f1"
         isFixed={true}
+        isScrolled={isScrolled}
         onMenuOpen={() => console.log('Staggered Menu opened')}
         onMenuClose={() => console.log('Staggered Menu closed')}
       />

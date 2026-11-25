@@ -16,6 +16,7 @@ export const StaggeredMenu = ({
   accentColor = '#6366f1',
   changeMenuColorOnOpen = true,
   isFixed = false,
+  isScrolled = false,
   closeOnClickAway = true,
   onMenuOpen,
   onMenuClose
@@ -356,6 +357,7 @@ export const StaggeredMenu = ({
       style={accentColor ? { ['--sm-accent']: accentColor } : undefined}
       data-position={position}
       data-open={open || undefined}
+      data-scrolled={isScrolled || undefined}
     >
       <div ref={preLayersRef} className="sm-prelayers" aria-hidden="true">
         {(() => {
