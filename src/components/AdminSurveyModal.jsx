@@ -62,7 +62,7 @@ export default function AdminSurveyModal({ isOpen, onClose }) {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `Jobinz_Etude_Marche_SNEE_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute('download', `AvenirGo_Etude_Marche_SNEE_${new Date().toISOString().slice(0, 10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

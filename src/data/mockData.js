@@ -211,7 +211,7 @@ export const STUDENT_JOURNEY_STEPS = [
   }
 ];
 
-export const JOBINZ_FEATURES = [
+export const AVENIRGO_FEATURES = [
   {
     feature: 'Offres rassemblées au même endroit',
     icon: 'search',
@@ -250,7 +250,7 @@ export const PRICING_TIERS = [
     title: 'Freemium Étudiant',
     price: '0 €',
     period: 'Gratuit pour toujours',
-    description: 'L\'essentiel pour démarrer sereinement et découvrir la puissance de Jobinz.',
+    description: 'L\'essentiel pour démarrer sereinement et découvrir la puissance d\'AvenirGo.',
     features: [
       'Création et scan du profil complet (Atlas)',
       'Recherche et agrégation d\'offres (Scout)',

@@ -8,7 +8,7 @@ import './CaseStudySara.css';
 
 const COMPARISON = {
   without: {
-    title: 'Sans Jobinz',
+    title: 'Sans AvenirGo',
     subtitle: 'Parcours classique',
     time: '~18 heures',
     unit: 'par semaine',
@@ -33,7 +33,7 @@ const COMPARISON = {
     ]
   },
   with: {
-    title: 'Avec Jobinz',
+    title: 'Avec AvenirGo',
     subtitle: 'L’étudiant + 6 agents IA',
     time: '~45 minutes',
     unit: 'par semaine',
@@ -69,7 +69,7 @@ const getRevealProps = (reduceMotion, delay = 0) => reduceMotion
     };
 
 function ComparisonFace({ variant }) {
-  const isJobinz = variant === 'with';
+  const isAvenirGo = variant === 'with';
   const content = COMPARISON[variant];
 
   return (
@@ -108,8 +108,8 @@ function ComparisonFace({ variant }) {
         <ul className="sara-points">
           {content.points.map(point => (
             <li key={point.title}>
-              <span className={`sara-point-icon${isJobinz ? ' sara-point-icon--positive' : ''}`}>
-                {isJobinz ? <Check aria-hidden="true" /> : <AlertCircle aria-hidden="true" />}
+              <span className={`sara-point-icon${isAvenirGo ? ' sara-point-icon--positive' : ''}`}>
+                {isAvenirGo ? <Check aria-hidden="true" /> : <AlertCircle aria-hidden="true" />}
               </span>
               <p>
                 <strong>{point.title}</strong>
@@ -119,10 +119,10 @@ function ComparisonFace({ variant }) {
           ))}
         </ul>
 
-        <div className={`sara-result${isJobinz ? ' sara-result--positive' : ''}`}>
+        <div className={`sara-result${isAvenirGo ? ' sara-result--positive' : ''}`}>
           <span className="sara-result-label">Résultat</span>
           <p>{content.result}</p>
-          {isJobinz && <Sparkles aria-hidden="true" />}
+          {isAvenirGo && <Sparkles aria-hidden="true" />}
         </div>
       </div>
     </SpotlightCard>
@@ -138,7 +138,7 @@ export default function CaseStudySara() {
 
   React.useEffect(() => () => window.clearTimeout(transitionTimer.current), []);
 
-  const revealJobinz = () => {
+  const revealAvenirGo = () => {
     setViewMode('with');
     setPaperStage('revealing');
     window.clearTimeout(transitionTimer.current);
@@ -162,12 +162,12 @@ export default function CaseStudySara() {
   };
 
   const handlePaperStateChange = state => {
-    if (state === 'crumpled' && paperStage === 'crumpling') revealJobinz();
+    if (state === 'crumpled' && paperStage === 'crumpling') revealAvenirGo();
   };
 
   const handlePaperError = error => {
-    console.error('PaperCrumple animation failed; showing the Jobinz comparison without it.', error);
-    if (paperStage === 'crumpling') revealJobinz();
+    console.error('PaperCrumple animation failed; showing the AvenirGo comparison without it.', error);
+    if (paperStage === 'crumpling') revealAvenirGo();
   };
 
   return (
@@ -189,8 +189,8 @@ export default function CaseStudySara() {
           aria-busy={paperStage === 'crumpling' || paperStage === 'revealing'}
         >
           {[
-            { id: 'without', label: 'Sans Jobinz' },
-            { id: 'with', label: 'Avec Jobinz · 6 agents IA' }
+            { id: 'without', label: 'Sans AvenirGo' },
+            { id: 'with', label: 'Avec AvenirGo · 6 agents IA' }
           ].map(option => (
             <button
               key={option.id}
@@ -248,7 +248,7 @@ export default function CaseStudySara() {
             >
               <PaperCrumple
                 src="/sara-without-card.svg"
-                alt="Carte Sans Jobinz qui se froisse"
+                alt="Carte Sans AvenirGo qui se froisse"
                 width={840}
                 height={520}
                 sceneHeight="100%"

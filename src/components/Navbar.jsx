@@ -17,7 +17,7 @@ export default function Navbar({ onOpenSurvey }) {
     { label: '6 Agents IA', ariaLabel: 'Les agents spécialisés', link: '#agents' },
     { label: 'Parcours', ariaLabel: 'Workflow en 6 étapes', link: '#journey' },
     { label: 'Cas Concret', ariaLabel: 'Cas Sara M1 Informatique', link: '#cas-sara' },
-    { label: 'Accompagnement', ariaLabel: 'Les services proposés par Jobinz', link: '#accompagnement' },
+    { label: 'Accompagnement', ariaLabel: 'Les services proposés par AvenirGo', link: '#accompagnement' },
     { label: 'Modèle Éco', ariaLabel: 'Freemium, Premium et B2B', link: '#modele-economique' },
     { label: 'Étude & Bêta', ariaLabel: 'Questionnaire et premiers testeurs', link: '#questionnaire' }
   ];

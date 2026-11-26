@@ -22,13 +22,20 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25em 2em;
+  padding: 0 2em;
   background: transparent;
   pointer-events: none;
   z-index: 30;
+  transition:
+    height 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease;
 }
 
 .staggered-menu-wrapper[data-scrolled]:not([data-open]) .staggered-menu-header {
@@ -37,6 +44,12 @@
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.2);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
+}
+
+.staggered-menu-wrapper[data-scrolled] .staggered-menu-header {
+  height: 56px;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 
 .staggered-menu-header > * {
@@ -51,8 +64,23 @@
 }
 
 .sm-logo-mark {
-  background: #ffffff;
+  background: #111827;
   border: 1px solid rgba(148, 163, 184, 0.3);
+  overflow: hidden;
+  transition: width 260ms cubic-bezier(0.22, 1, 0.36, 1), height 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.staggered-menu-wrapper[data-scrolled] .sm-logo-mark {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.sm-logo-name {
+  transition: font-size 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.staggered-menu-wrapper[data-scrolled] .sm-logo-name {
+  font-size: 1.125rem;
 }
 
 .sm-logo-name {
@@ -88,7 +116,7 @@
   border: 1px solid rgba(148, 163, 184, 0.25);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 0.55rem 1.1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 9999px;
   cursor: pointer;
   color: #1e293b;
@@ -353,5 +381,25 @@
   }
   .sm-prelayers {
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .staggered-menu-header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .staggered-menu-wrapper[data-scrolled] .staggered-menu-header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .staggered-menu-header,
+  .sm-logo-mark,
+  .sm-logo-name {
+    transition: none;
   }
 }

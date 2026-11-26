@@ -36,13 +36,10 @@ export default function Footer({ onOpenAdmin }) {
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E2538] to-[#121624] border border-white/15 flex items-center justify-center">
-                <svg width="22" height="22" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M50 8 L85 45 C86 46.2 84.8 48 83 48 L17 48 C15.2 48 14 46.2 15 45 L50 8 Z" fill="#6366f1" />
-                  <path d="M50 48 V80 C50 92 41 98 29 98 C17 98 8 91 8 82 C8 78 11 75 15 75 C19 75 22 78 23.5 81 C24.5 83 26.5 84.5 29 84.5 C34 84.5 37 80 37 73 V48 H50 Z" fill="#1E293B" />
-                </svg>
+                <img src="/logo-icon.svg" alt="" className="w-full h-full rounded-xl object-cover" />
               </div>
               <span className="site-footer__brand-name text-2xl font-bold tracking-tight">
-                Job<span>inz</span>
+                Avenir<span>Go</span>
               </span>
             </div>
 
@@ -66,7 +63,7 @@ export default function Footer({ onOpenAdmin }) {
               <li><a href="#agents" className="hover:text-white transition-colors">Les 6 Agents IA</a></li>
               <li><a href="#journey" className="hover:text-white transition-colors">Parcours Étudiant</a></li>
               <li><a href="#cas-sara" className="hover:text-white transition-colors">Cas Sara (M1)</a></li>
-              <li><a href="#accompagnement" className="hover:text-white transition-colors">Accompagnement Jobinz</a></li>
+              <li><a href="#accompagnement" className="hover:text-white transition-colors">Accompagnement AvenirGo</a></li>
               <li><a href="#modele-economique" className="hover:text-white transition-colors">Modèle Économique</a></li>
             </ul>
           </div>
@@ -100,7 +97,7 @@ export default function Footer({ onOpenAdmin }) {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© 2026 Jobinz. Tous droits réservés. Conçu avec passion pour les étudiants.</p>
+          <p>© 2026 AvenirGo. Tous droits réservés. Conçu avec passion pour les étudiants.</p>
           <div className="flex items-center gap-4">
             <a href="https://data.inpi.fr/" target="_blank" rel="noreferrer" className="hover:text-slate-400 transition-colors">
               Base INPI

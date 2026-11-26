@@ -40,7 +40,7 @@ function localSurveyStoragePlugin() {
   let writeQueue = Promise.resolve();
 
   return {
-    name: 'jobinz-local-survey-storage',
+    name: 'avenirgo-local-survey-storage',
     configureServer(server) {
       server.middlewares.use('/api/submit-survey', async (request, response) => {
         if (request.method !== 'POST') {

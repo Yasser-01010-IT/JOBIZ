@@ -2,7 +2,7 @@
   <rect x="1" y="1" width="838" height="518" rx="28" fill="#0b1220" stroke="#60a5fa" stroke-opacity=".48" stroke-width="2"/>
   <rect x="36" y="34" width="48" height="48" rx="15" fill="#17243a" stroke="#64748b" stroke-opacity=".38"/>
   <path d="m53 51 14 14m0-14L53 65" fill="none" stroke="#bfdbfe" stroke-linecap="round" stroke-width="3"/>
-  <text x="102" y="56" fill="#f1f5f9" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Sans Jobinz</text>
+  <text x="102" y="56" fill="#f1f5f9" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Sans AvenirGo</text>
   <text x="102" y="78" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14">Parcours classique</text>
   <rect x="616" y="42" width="185" height="36" rx="10" fill="#17243a" stroke="#64748b" stroke-opacity=".4"/>
   <circle cx="635" cy="60" r="7" fill="none" stroke="#93c5fd" stroke-width="1.8"/>

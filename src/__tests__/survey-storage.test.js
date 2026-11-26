@@ -44,7 +44,7 @@ function createSubmission(overrides = {}) {
 
 describe('local Excel survey storage', () => {
   it('creates a workbook and appends later responses without evaluating spreadsheet formulas', async () => {
-    const directory = await mkdtemp(path.join(os.tmpdir(), 'jobinz-survey-'));
+    const directory = await mkdtemp(path.join(os.tmpdir(), 'avenirgo-survey-'));
     temporaryDirectories.push(directory);
     const workbookPath = path.join(directory, 'responses.xlsx');
 

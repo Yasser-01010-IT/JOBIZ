@@ -20,7 +20,7 @@ const STEPS = [
   },
   {
     title: 'Bêta test',
-    description: 'Choisis librement si tu souhaites tester Jobinz.'
+    description: 'Choisis librement si tu souhaites tester AvenirGo.'
   }
 ];
 
@@ -247,7 +247,7 @@ export default function SurveyQuestionnaire() {
           return 'Saisis une adresse e-mail valide pour être recontacté(e).';
         }
         if (!formData.contactConsent) {
-          return 'Confirme que Jobinz peut te contacter au sujet du bêta test.';
+          return 'Confirme que AvenirGo peut te contacter au sujet du bêta test.';
         }
       }
     }
@@ -341,7 +341,7 @@ export default function SurveyQuestionnaire() {
         <header className="survey-header">
           <span className="survey-kicker">
             <Sparkles aria-hidden="true" />
-            <span className="survey-kicker__text">Étude & bêta test Jobinz</span>
+            <span className="survey-kicker__text">Étude & bêta test AvenirGo</span>
           </span>
           <h2 className="survey-title">
             Dis-nous ce qui te <span>serait vraiment utile.</span>
@@ -358,7 +358,7 @@ export default function SurveyQuestionnaire() {
               <CheckCircle2 aria-hidden="true" />
             </span>
             <p className="survey-success__eyebrow">Réponse enregistrée</p>
-            <h3>Merci de nous aider à améliorer Jobinz.</h3>
+            <h3>Merci de nous aider à améliorer AvenirGo.</h3>
             <p>
               {formData.wantsToTest
                 ? `Ta demande pour tester l’application est notée. Nous pourrons te recontacter à ${formData.email}.`
@@ -572,7 +572,7 @@ export default function SurveyQuestionnaire() {
 
               <Step title={STEPS[3].title} description={STEPS[3].description}>
                 <div className="survey-fields">
-                  <Field label="Souhaites-tu faire partie des premiers testeurs de Jobinz ?">
+                  <Field label="Souhaites-tu faire partie des premiers testeurs d’AvenirGo ?">
                     <ChoiceCards
                       name="wantsToTest"
                       options={[
@@ -626,7 +626,7 @@ export default function SurveyQuestionnaire() {
                           onChange={event => updateField('contactConsent', event.target.checked)}
                         />
                         <span>
-                          J’accepte d’être contacté(e) à cette adresse au sujet du bêta test de Jobinz.
+                          J’accepte d’être contacté(e) à cette adresse au sujet du bêta test d’AvenirGo.
                         </span>
                       </label>
                     </div>
@@ -649,7 +649,7 @@ export default function SurveyQuestionnaire() {
                       onChange={event => updateField('consentResearch', event.target.checked)}
                     />
                     <span>
-                      J’accepte l’enregistrement de mes réponses dans le fichier Excel de l’étude afin d’améliorer Jobinz.
+                      J’accepte l’enregistrement de mes réponses dans le fichier Excel de l’étude afin d’améliorer AvenirGo.
                       Mon e-mail est enregistré uniquement si je choisis de devenir testeur.
                     </span>
                   </label>

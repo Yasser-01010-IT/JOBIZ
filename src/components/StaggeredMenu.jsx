@@ -373,16 +373,13 @@ export const StaggeredMenu = ({
 
       <header className="staggered-menu-header" aria-label="Main navigation header">
         {/* Brand Logo */}
-        <a href="#" className="sm-logo flex items-center gap-3 group" aria-label="Logo Jobinz">
-          <div className="sm-logo-mark w-9 h-9 rounded-xl flex items-center justify-center group-hover:border-brand-500/50 transition-all">
-            <svg width="22" height="22" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 8 L85 45 C86 46.2 84.8 48 83 48 L17 48 C15.2 48 14 46.2 15 45 L50 8 Z" fill="#6366f1" />
-              <path d="M50 48 V80 C50 92 41 98 29 98 C17 98 8 91 8 82 C8 78 11 75 15 75 C19 75 22 78 23.5 81 C24.5 83 26.5 84.5 29 84.5 C34 84.5 37 80 37 73 V48 H50 Z" fill="#1E293B" />
-            </svg>
+        <a href="#" className="sm-logo flex items-center gap-3 group" aria-label="Logo AvenirGo">
+          <div className="sm-logo-mark w-8 h-8 rounded-xl flex items-center justify-center group-hover:border-brand-500/50 transition-all">
+            <img src="/logo-icon.svg" alt="" className="w-full h-full rounded-xl object-cover" />
           </div>
           <div className="text-left">
-            <span className="sm-logo-name text-2xl font-bold tracking-tight">
-              Job<span className="sm-logo-accent">inz</span>
+            <span className="sm-logo-name text-xl font-bold tracking-tight">
+              Avenir<span className="sm-logo-accent">Go</span>
             </span>
           </div>
         </a>
@@ -391,7 +388,7 @@ export const StaggeredMenu = ({
         <div className="flex items-center gap-3">
           <a
             href="#questionnaire"
-            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-indigo-700 to-indigo-600 rounded-full shadow-md hover:shadow-brand-500/20 active:scale-95 transition-all"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-indigo-700 to-indigo-600 rounded-full shadow-md hover:shadow-brand-500/20 active:scale-95 transition-all"
           >
             <span>Pass Bêta</span>
           </a>

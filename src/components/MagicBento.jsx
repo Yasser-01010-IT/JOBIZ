@@ -516,8 +516,8 @@ const finite = animation => {
 
 const nameOf = animation => animation.animationName || '';
 
-// Default items tailored specifically to Jobinz
-export const JOBINZ_BENTO_ITEMS = [
+// Default items tailored specifically to AvenirGo
+export const AVENIRGO_BENTO_ITEMS = [
   {
     title: 'Matching Sémantique Nexus',
     description: 'Score de compatibilité précis et détection des compétences requises',
@@ -567,7 +567,7 @@ export const JOBINZ_BENTO_ITEMS = [
 ];
 
 const MagicBento = ({
-  items = JOBINZ_BENTO_ITEMS,
+  items = AVENIRGO_BENTO_ITEMS,
   columns = 4,
   rowHeight = 200,
   gap = 12,

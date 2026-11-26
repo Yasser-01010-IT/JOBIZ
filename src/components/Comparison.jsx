@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart3, FileCheck, MailCheck, Search, ShieldCheck, Sparkles, UserCheck } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { JOBINZ_FEATURES } from '../data/mockData';
+import { AVENIRGO_FEATURES } from '../data/mockData';
 import './Comparison.css';
 
 const featureIcons = {
@@ -31,7 +31,7 @@ export default function Comparison() {
         <motion.header className="comparison-header" {...reveal(0)}>
           <span className="comparison-eyebrow">
             <Sparkles aria-hidden="true" />
-            Ce que Jobinz t’apporte
+            Ce que AvenirGo t’apporte
           </span>
           <h2>
             Ta recherche de stage,
@@ -46,12 +46,12 @@ export default function Comparison() {
           <table className="comparison-table">
             <thead>
               <tr>
-                <th scope="col">Les services Jobinz</th>
+                <th scope="col">Les services AvenirGo</th>
                 <th scope="col">Ce que ça t’apporte</th>
               </tr>
             </thead>
             <tbody>
-              {JOBINZ_FEATURES.map((feature, index) => {
+              {AVENIRGO_FEATURES.map((feature, index) => {
                 const Icon = featureIcons[feature.icon];
 
                 return (

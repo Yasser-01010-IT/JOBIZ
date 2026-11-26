@@ -88,7 +88,7 @@ function BusinessCard({ type, icon: Icon, title, need, value, revenue }) {
             {need}
           </p>
           <p>
-            <strong>Ce que Jobinz apporte</strong>
+            <strong>Ce que AvenirGo apporte</strong>
             {value}
           </p>
         </div>

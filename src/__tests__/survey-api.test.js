@@ -19,8 +19,8 @@ function createRequest(overrides = {}) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      host: 'jobinz.example',
-      origin: 'https://jobinz.example'
+      host: 'avenirgo.example',
+      origin: 'https://avenirgo.example'
     },
     body: {
       studyLevel: 'M1',

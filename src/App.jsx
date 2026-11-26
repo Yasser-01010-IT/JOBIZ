@@ -50,7 +50,7 @@ export default function App() {
         {/* Interactive Case Study: Sara (M1 Informatique) */}
         <CaseStudySara />
 
-        {/* Strategic Comparison: Jobinz vs LinkedIn / Indeed */}
+        {/* Strategic Comparison: AvenirGo vs LinkedIn / Indeed */}
         <Comparison />
 
         {/* Business Model: Freemium, Premium & B2B */}

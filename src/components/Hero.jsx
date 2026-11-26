@@ -54,7 +54,7 @@ export default function Hero({ onOpenSurvey }) {
           </h1>
 
           <p className="font-sans italic text-base sm:text-lg lg:text-xl text-slate-200 mt-6 max-w-[58ch] leading-relaxed">
-            Jobinz orchestre six intelligences artificielles complémentaires pour profiler vos atouts, dénicher les opportunités cachées et envoyer vos candidatures sur-mesure.
+            AvenirGo orchestre six intelligences artificielles complémentaires pour profiler vos atouts, dénicher les opportunités cachées et envoyer vos candidatures sur-mesure.
           </p>
 
           {/* Center Call to Actions */}
@@ -84,7 +84,7 @@ export default function Hero({ onOpenSurvey }) {
             <div className="showcase-heading-copy">
               <div className="showcase-eyebrow">
                 <Sparkles aria-hidden="true" />
-                <span>Jobinz · L’espace de ta recherche</span>
+                <span>AvenirGo · L’espace de ta recherche</span>
               </div>
               <h2 className="showcase-title">
                 Le bon stage.
